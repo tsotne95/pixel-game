@@ -86,6 +86,7 @@ function gameOver() {
   gameOverMessage.style.color = '#ff6f7d'; /* Soft pastel pink */
   gameOverMessage.style.fontSize = '24px';
   gameOverMessage.style.fontFamily = 'Nunito, sans-serif';
+  gameOverMessage.id = 'game-over-message'; // Add an ID for easy removal
   gameContainer.appendChild(gameOverMessage);
 
   // Disable stop button and enable start button
@@ -103,11 +104,15 @@ startButton.addEventListener('click', () => {
   score = 0;
   scoreElement.textContent = `Score: ${score}`;
 
-  // Clear existing items and game over message
+  // Clear existing items
   const items = document.querySelectorAll('.item');
   items.forEach(item => item.remove());
-  const gameOverMessage = document.querySelector('.game-over');
-  if (gameOverMessage) gameOverMessage.remove();
+
+  // Clear "Game Over" message if it exists
+  const gameOverMessage = document.getElementById('game-over-message');
+  if (gameOverMessage) {
+    gameOverMessage.remove();
+  }
 
   // Start creating items
   itemInterval = setInterval(() => {

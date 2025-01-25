@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #faf3dd; /* Soft pastel beige background */
+  font-family: 'Nunito', sans-serif; /* Friendly, rounded font */
+}
+
+.game-container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background-color: #ffffff; /* White background */
+  border: 4px solid #ffb5a7; /* Soft pastel coral border */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#player {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #a8d8ea; /* Soft pastel blue */
+  border: 2px solid #81b9d7; /* Slightly darker pastel blue */
+  border-radius: 50%; /* Circular player */
+}
+
+.item {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ff8b94; /* Soft pastel pink */
+  border: 2px solid #ff6f7d; /* Slightly darker pastel pink */
+  border-radius: 50%; /* Circular items */
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #333333; /* Dark gray text */
+  font-size: 16px;
+}
+
+.rules {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark gray text */
+  border: 2px solid #a8d8ea; /* Soft pastel blue border */
+  font-size: 14px;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.rules h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  text-align: center;
+  color: #ff8b94; /* Soft pastel pink heading */
+}
+
+.rules p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.controls {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif; /* Friendly font */
+  background-color: #ff8b94; /* Soft pastel pink */
+  color: #ffffff; /* White text */
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.controls button:hover {
+  background-color: #ff6f7d; /* Slightly darker pastel pink on hover */
+}
+
+.controls button:disabled {
+  background-color: #cccccc; /* Light gray when disabled */
+  color: #666666; /* Dark gray text */
+  cursor: not-allowed;
+}
